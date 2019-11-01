@@ -1,0 +1,261 @@
+// PARTIALS =============================
+@import "./partials/setup";
+@import "./partials/visually-hidden";
+@import "./partials/skip-link";
+@import "./partials/mixins";
+
+// VARIABLES =============================
+
+// COLORS
+$color-1: #0D0D0D;    //rbga(13, 13, 13)
+$color-2: #4C0341;    //rgba(76, 3, 65)
+$color-3: #FFFFFF;    //rgba(255, 255, 255)
+$color-5: #FE6F19;    //rgba(254, 111, 25)
+$color-4: #FAE5FF;    //rgba(250, 229, 255)
+$color-6: #882C07;     //rgba(136, 44, 7)
+
+
+// GENERAL FORMATTING ======================
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.container {
+    display: flex;
+}
+
+img {
+    width: 100%;
+}
+
+// BODY STYLES ==============================
+
+body {
+    font-family: "Lato", sans-serif;
+    font-family: "Pompiere";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+    font-family: "Pompiere";
+    margin: 0;
+    color: $color-2;
+}
+
+h1 {
+    font-size: 11rem;
+    line-height: 6.4rem;
+    flex-direction: column;
+}
+
+h2 {
+  font-size: 8rem;
+  line-height: 9.2rem;  
+}
+
+h3 {
+    font-size: 5.2rem;
+    letter-spacing: 0.16rem;
+}
+
+h4 {
+    font-size: 5.2rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;  
+}
+
+h5 {
+    font-size: 4.2rem;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-size: 3rem;
+    letter-spacing: 0.13rem;
+}
+
+.logo {
+    font-size: 3.58rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.11rem;
+}
+
+p,
+li, 
+a {
+    font-family: "Lato";
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+nav li {
+    line-height: .29rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    font-size: 3rem;
+    background: $color-2;
+    color: $color-3;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.button {
+    line-height: .32rem;
+}
+
+.button-1,
+.button-2 {
+    padding: 1rem 2rem;
+    color: $color-3;
+    display: inline-block;
+    margin-top: 10px;
+
+}
+
+.button-1 {
+    background-color: $color-2;
+        a {
+            margin-top: 20px;
+        }
+}
+
+.button-2 {
+    background-color: $color-6;
+} 
+
+.background-1 {
+    background-color: $color-4;
+}
+
+.background-2 {
+    background-color: $color-3;
+}
+
+// HEADER ===============================
+
+header.index-page {
+    background-image: url("./assets/header-image.jpg");
+    height: 90vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .title {
+        h1{ 
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 30%;
+            margin: 10% 0;
+        }   
+    }
+
+    nav {
+        justify-content: space-between;
+        padding-top: 20px;
+        // margin-bottom: 10px;
+        align-items: center;
+        
+        .head-logo {
+            flex-direction: column;
+        }
+
+        li {
+            margin-left: 20px;
+            list-style: none;
+            
+            a { 
+                color: $color-2;
+        
+            }
+        }
+    }
+
+}
+
+// FLOAT IMG ONE ===========================
+
+.float-img-1 {
+    max-width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+}
+
+
+// UNDER THE SEA ========================
+
+.under-the-sea {
+    padding: 150px 0;
+    text-align: center;    
+}
+
+
+
+
+// NEW-STUFF ============================
+
+.new {
+    padding: 70px 0;
+    // position: relative;
+    
+}
+
+.new-additions-img {
+
+    // position: relative;
+    margin-right: 50px;
+
+    img {
+        box-shadow: $color-5 20px 15px;
+        margin: 0 25px 20px 0;
+        max-width: 30%;
+        // position: absolute;
+        // top: -15px;
+        // left: 0;
+    }
+}
+
+
+// TOO MANY OPTIONS ======================
+
+.options {
+    padding: 70px 0;
+    
+}
+
+// FOOTER - ALL PAGES =======================
+
+footer {
+    background-color: $color-6;
+    color: $color-3;
+    padding: 0.3% 0;
+    text-align: center;
+}
+
+// ***********************************
+// BLOG PAGE SYLES 
+// ***********************************
+
+header.blog-page {
+    background-image: url("./assets/blog-header.jpg");
+    height: 70vh;
+    background-position: center;
+}
