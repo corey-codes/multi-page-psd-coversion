@@ -22,17 +22,17 @@ html {
 }
 
 .wrapper {
-    max-width: 1080px;
-    margin: 0 auto;
+    max-width: 1280px;
     width: 90%;
+    margin: 0 auto;
 }
 
-.container {
+.flex-container {
     display: flex;
 }
 
-img {
-    width: 100%;
+* {
+    border: 1px solid red;
 }
 
 // BODY STYLES ==============================
@@ -40,6 +40,10 @@ img {
 body {
     font-family: "Lato", sans-serif;
     font-family: "Pompiere";
+}
+
+img {
+    width: 100%;
 }
 
 h1,
@@ -212,33 +216,71 @@ header.index-page {
 
 // NEW-STUFF ============================
 
-.new {
-    padding: 70px 0;
-    // position: relative;
-    
+.new-stuff {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10rem;
+    padding: 70px 0;  
+    position: relative;  
 }
 
 .new-additions-img {
-
-    // position: relative;
-    margin-right: 50px;
-
-    img {
-        box-shadow: $color-5 20px 15px;
-        margin: 0 25px 20px 0;
-        max-width: 30%;
-        // position: absolute;
-        // top: -15px;
-        // left: 0;
-    }
+    box-shadow: $color-5 20px 20px;
+    // position: absolute;
+   
 }
 
+.new-additions-copy {
+    // padding: 0 9rem 2rem 0;
+    padding-right: 10%;
+}
 
 // TOO MANY OPTIONS ======================
 
-.options {
-    padding: 70px 0;
-    
+.too-many-options-copy {
+    // padding: 0 0 2rem 9rem;
+    padding-left: 10%;
+    text-align: right;
+}
+
+.too-many-options-img {
+    box-shadow: $color-5 -20px 20px;
+}
+
+
+
+// ABOUT ==================================
+
+.about {
+    padding: 7rem 0;
+    display: grid;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+// POPULAR THIS MONTH ======================
+
+.popular-month-img img {
+    box-shadow: $color-5 20px 15px;
+    // margin: 0 25px 20px 0;
+    // max-width: 40%;
+    // flex-grow: 1;
+}
+
+.popular-month-copy {
+    // flex-grow: 2;
+}
+
+// GALLERY ==================================
+
+.gallery img:nth-child(2) {
+    margin: 0 2rem;
+}
+
+.gallery {
+    justify-content: space-between;
 }
 
 // FOOTER - ALL PAGES =======================
@@ -251,8 +293,13 @@ footer {
 }
 
 // ***********************************
+
 // BLOG PAGE SYLES 
+
 // ***********************************
+
+
+// BLOG HEADER =====================
 
 header.blog-page {
     background-image: url("./assets/blog-header.jpg");
