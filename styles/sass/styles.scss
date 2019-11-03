@@ -52,6 +52,7 @@ h6,
     font-family: "Pompiere";
     margin: 0;
     color: $color-2;
+    
 }
 
 h1 {
@@ -85,6 +86,7 @@ h5 {
 h6 {
     font-size: 3rem;
     letter-spacing: 0.13rem;
+    text-transform: uppercase;
 }
 
 .logo {
@@ -163,14 +165,12 @@ header.index-page {
     position: relative;
 
     .title {
-        display: flex;
         height: 100%;
+        display: flex;
         justify-content: flex-start;
         margin-top: 8rem;
         
             h1 { 
-                justify-content: flex-start;
-                flex-wrap: wrap;
                 width: 30%;
             }   
         }    
@@ -251,9 +251,7 @@ nav.all-pages-nav {
     .new-additions-copy {
         padding-right: 10%;
     }
-
-    
-    
+ 
     .too-many-options-copy {
         padding-left: 10%;
         text-align: right;
@@ -389,15 +387,99 @@ header.blog-page {
     background-position: center;
     height: 70vh;
 
-    .title {
-        display: flex;
-        height: 80%;
+    // THE HEIGHT ON THIS ISN'T WORKING LIKE IT SHOULD HAD TO REDUCE FROM 100% TO 80%
+     .blog-title {
+         display: flex;
+         height: 80%;
+         justify-content: center;
+         align-items: center;
 
-        h1 {
-            display: column;
-            justify-content: center;
+     }
+} 
+
+// BLOG MAIN ============================
+
+.blog-main {
+    // display: flex;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+    
+// ASIDE ============================
+aside { 
+    display: flex; //JUST ADDED FOR TEST
+    padding: 5rem 0.5rem 1rem 5rem;
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    
+    .aside-img {
+        position: absolute;
+        left: 0;
+        width: 85%;
+        z-index: 5;
+    }
+
+    .aside-content {
+        background-color: $color-3;
+        padding: 1rem 2rem 1rem 1rem;
+        width: 70%;
+        position: absolute;
+        left: 9rem;
+        top: 7rem;
+
+        .aside-copy {
+            padding-top: 32rem;
+
+            h6 {
+                margin: 4rem 0 1rem 0;
+            }
+
+            p {
+                padding-bottom: 2rem;
+            }
+
         }
     }
 }
+
+// BLOG POST =============================
+
+.blog-area {
+    position: relative;
+    
+    .blog-img {
+        position: absolute;
+        top: -10rem;
+        right: 0;
+        padding-left: 2rem;
+        
+        .blog-post-img {
+        box-shadow: $color-5 -20px 20px;
+            
+        }
+    }
+}
+
+.blog-post {
+    padding: 3rem 6rem;
+    
+
+    .date {
+        margin-top: 0.1rem;
+        padding-bottom: 2rem;
+    }
+}
+
+
+
+    
+
+
+
+
+
 
 

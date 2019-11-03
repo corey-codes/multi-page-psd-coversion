@@ -271,6 +271,7 @@ h5 {
 h6 {
   font-size: 3rem;
   letter-spacing: 0.13rem;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -353,10 +354,10 @@ header.index-page {
 }
 
 header.index-page .title {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -364,11 +365,6 @@ header.index-page .title {
 }
 
 header.index-page .title h1 {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 30%;
 }
 
@@ -594,16 +590,91 @@ header.blog-page {
   height: 70vh;
 }
 
-header.blog-page .title {
+header.blog-page .blog-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 80%;
-}
-
-header.blog-page .title h1 {
-  display: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blog-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem 0.5rem 1rem 5rem;
+  position: relative;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+aside .aside-img {
+  position: absolute;
+  left: 0;
+  width: 85%;
+  z-index: 5;
+}
+
+aside .aside-content {
+  background-color: #FFFFFF;
+  padding: 1rem 2rem 1rem 1rem;
+  width: 70%;
+  position: absolute;
+  left: 9rem;
+  top: 7rem;
+}
+
+aside .aside-content .aside-copy {
+  padding-top: 32rem;
+}
+
+aside .aside-content .aside-copy h6 {
+  margin: 4rem 0 1rem 0;
+}
+
+aside .aside-content .aside-copy p {
+  padding-bottom: 2rem;
+}
+
+.blog-area {
+  position: relative;
+}
+
+.blog-area .blog-img {
+  position: absolute;
+  top: -10rem;
+  right: 0;
+  padding-left: 2rem;
+}
+
+.blog-area .blog-img .blog-post-img {
+  -webkit-box-shadow: #FE6F19 -20px 20px;
+          box-shadow: #FE6F19 -20px 20px;
+}
+
+.blog-post {
+  padding: 3rem 6rem;
+}
+
+.blog-post .date {
+  margin-top: 0.1rem;
+  padding-bottom: 2rem;
 }
