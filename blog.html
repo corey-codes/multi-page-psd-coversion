@@ -21,6 +21,7 @@
 <!-- BODY ---------------->
 
 <body>
+    <a href="#main" class="visually-hidden">Skip to main content</a>
 
 <!-- HEADER --------------->
     <header class="blog-page">
@@ -119,49 +120,67 @@
 <!-- COMMENTS ------------------------------->
             <div class="comments">
 
-                <h3></h3>
+                <h3>Comments:</h3>
 
-                    <div class="user-comment">
+                    <div class="user-comment-1">
 
-                        <img src="./styles/assets/comment-1.jpg" alt="User profile picture">
+                        <div class="user-photo">
+                            <img src="./styles/assets/comment-1.jpg" alt="User profile picture">
+                        </div>
 
-                        <p class="date">Tuesday, November 21st, 2019 by Jeremy</p>
-
-                        <p class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur velit distinctio sunt. Maiores distinctio, quam harum tempora iure magnam incidunt recusandae in ipsum, eum tenetur officia! Voluptatum quia quam minus.</p>
-
-                    </div>
-
-                    <div class="user-comment">
-
-                        <img src="./styles/assets/comment-2.jpg" alt="user profile picture">
-
-                        <p class="date">Wednesday, November 10th, 2019 by Julia</p>
-
-                        <p class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur velit distinctio sunt.
-                        Maiores distinctio, quam harum tempora iure magnam incidunt recusandae in ipsum, eum tenetur officia! Voluptatum
-                        quia quam minus.</p>
+                        <div class="posted-comment-1">
+                            <p class="date">Tuesday, November 21st, 2019 by Jeremy</p>
+    
+                            <p class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur velit distinctio sunt. Maiores distinctio, quam harum tempora iure magnam incidunt recusandae in ipsum, eum tenetur officia! Voluptatum quia quam minus.</p>
+                        </div>
 
                     </div>
+
+                    <div class="user-comment-2">
+
+                        <div class="user-photo">
+                            <img src="./styles/assets/comment-2.jpg" alt="user profile picture">
+                        </div>
+
+                        <div class="posted-comment-2">
+                            <p class="date">Wednesday, November 10th, 2019 by Julia</p>
+    
+                            <p class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur velit distinctio sunt.
+                            Maiores distinctio, quam harum tempora iure magnam incidunt recusandae in ipsum, eum tenetur officia! Voluptatum
+                            quia quam minus.</p>
+                        </div>
+
+                    </div>
+            </div>  
 
     <!-- COMMENT FORM ---------------------->
-                    <div class="comment-submit">
+                <div class="comment-submit">
 
-                        <form action="submit" class="comment-form">
-                        
+                    <form action="submit" class="comment-form">
+                    
+
+                        <div class="user-details">
+
                             <label for="name" class="visually-hidden">Name</label>
                             <input type="text" id="name" class="name" placeholder="Name">
                         
                             <label for="email" class="visually-hidden">Email address</label>
                             <input type="email" id="email" class="name" placeholder="Email address">
-                        
+                            
+                        </div>
+                    
+                        <div class="text-submit">
+
                             <textarea name="message" id="message" cols="30" rows="10" placeholder="Comment"></textarea>
                         
-                            <button class="submit">Post Comment</button>
-                        
-                        </form>
+                            <button class="submit button-1">Post Comment</button>
 
-                    </div>
-            </div>
+                        </div>
+                    
+                    </form>
+
+                </div>
+            <!-- </div> -->
         
         </div>
 
