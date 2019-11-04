@@ -285,7 +285,9 @@ p,
 li,
 a,
 ::-webkit-input-placeholder,
-button {
+button,
+input[type="text"],
+textarea {
   font-family: "Lato";
   font-size: 2rem;
   letter-spacing: 0.1rem;
@@ -295,7 +297,9 @@ p,
 li,
 a,
 :-ms-input-placeholder,
-button {
+button,
+input[type="text"],
+textarea {
   font-family: "Lato";
   font-size: 2rem;
   letter-spacing: 0.1rem;
@@ -305,7 +309,9 @@ p,
 li,
 a,
 ::-ms-input-placeholder,
-button {
+button,
+input[type="text"],
+textarea {
   font-family: "Lato";
   font-size: 2rem;
   letter-spacing: 0.1rem;
@@ -315,7 +321,9 @@ p,
 li,
 a,
 ::placeholder,
-button {
+button,
+input[type="text"],
+textarea {
   font-family: "Lato";
   font-size: 2rem;
   letter-spacing: 0.1rem;
@@ -328,6 +336,15 @@ nav li {
 a {
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.hamburger,
+.exit-responsive {
+  display: none;
+}
+
+.show.menu {
+  display: block;
 }
 
 a.email-address {
@@ -363,6 +380,7 @@ i.contact-icon {
   color: #FFFFFF;
   display: inline-block;
   margin-top: 10px;
+  text-transform: uppercase;
 }
 
 .button-1 {
@@ -373,8 +391,16 @@ i.contact-icon {
   margin-top: 20px;
 }
 
+.button-1:hover {
+  background-color: #882C07;
+}
+
 .button-2 {
   background-color: #882C07;
+}
+
+.button-2:hover {
+  background-color: #4C0341;
 }
 
 .background-1 {
@@ -771,6 +797,11 @@ form.contact-form input {
   background-color: #FAE5FF;
 }
 
+form.comment-form textarea,
+form.contact-form textarea {
+  resize: none;
+}
+
 form.comment-form .user-details,
 form.contact-form .user-details {
   display: -webkit-box;
@@ -875,10 +906,6 @@ form.contact-form .text-submit button {
   background-color: #FFFFFF;
 }
 
-.contact-form-area .contact-form .text-submit .button-2 {
-  text-transform: uppercase;
-}
-
 .contact-us {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -886,14 +913,86 @@ form.contact-form .text-submit button {
   padding: 8rem 2rem 8rem 6rem;
 }
 
-.contact-us .social {
-  margin-bottom: 2rem;
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 0;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
-.contact-us .contact-info {
+.social ul {
+  padding: 0;
+}
+
+.social ul li {
+  list-style: none;
+  display: inline-block;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.social ul li i:hover {
+  color: #FE6F19;
+}
+
+.contact-info {
   line-height: 1.8rem;
 }
 
-.contact-us .contact-info .email-address {
+.contact-info a:hover {
+  color: #FE6F19;
+}
+
+.contact-info .email-address {
   padding: 2rem 0;
+}
+
+@media all and (max-width: 850px) {
+  .hamburger,
+  .exit-responsive {
+    display: block;
+    font-size: 2rem;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #4C0341;
+    width: 100%;
+  }
+  .menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+  .menu ul li.exit-responsive {
+    text-align: right;
+    color: white;
+  }
+  .menu ul li {
+    padding: 2rem;
+  }
+  nav.all-pages-nav ul li {
+    margin-left: 0;
+  }
+  nav.all-pages-nav ul li a {
+    color: white;
+  }
+  .menu ul a {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    padding: 4rem;
+  }
 }
