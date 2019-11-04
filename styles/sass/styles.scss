@@ -115,12 +115,27 @@ a {
     text-transform: uppercase;
 }
 
-i {
+a.email-address {
+    font-family: "Pompiere";
+    font-size: 3rem;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-2;  
+}
+
+i.about-icon {
     font-size: 3rem;
     background: $color-2;
     color: $color-3;
     border-radius: 50%;
     padding: 15px;
+}
+
+i.contact-icon {
+    font-size: 2rem;
+    color: $color-2;
+    padding: 5px 20px 5px 0;
 }
 
 .button {
@@ -502,55 +517,135 @@ aside {
             
         }
     }
-
-    .comment-submit {
-        padding: 3rem 2rem;
-    }
-
-    .comment-form {
-        // display: flex;
-        // flex-direction: column;
-        
-        input {
-            border: none;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-bottom: 1px solid $color-5;
-            background-color: $color-4;
-        }
-
-        
-        .user-details {
-            display: flex;
-            justify-content: space-between;
-
-            .name,
-            .email {
-                width: 45%;
-            }
-        }
-
-        .text-submit {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-
-            textarea {
-                background-color: $color-4;
-                border: 1px solid $color-5;
-                padding: 2rem;
-            }
-
-            button {
-                border: none;
-                margin: 3rem 0;
-            }
-        }
-    }
-    
 }
 
+// BLOG FORM ================================
+
+.comment-submit {
+    padding: 3rem 2rem;
+}
+
+// BLOG & CONTACT FORM STYLES  ================
+
+
+form.comment-form,
+form.contact-form {
     
+    input {
+        border: none;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-bottom: 1px solid $color-5;
+        background-color: $color-4;
+    }
+
+    
+    .user-details {
+        display: flex;
+        justify-content: space-between;
+
+        .name,
+        .email {
+            width: 45%;
+        }
+    }
+
+    .text-submit {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        textarea {
+            background-color: $color-4;
+            border: 1px solid $color-5;
+            padding: 2rem;
+        }
+
+        button {
+            border: none;
+            margin: 3rem 0;
+        }
+    }
+}
+    
+
+// ***********************************
+
+// CONTACT PAGE SYLES 
+
+// ***********************************
+
+
+// CONTACT HEADER =====================
+
+.contact-page {
+    background-image: url("./assets/contact-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+
+    .title {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+} 
+
+// CONTACT FORM STYLES ===================
+
+.main-contact {
+    display: relative;
+}
+
+.contact-form-area {
+    padding: 3rem;
+    width: 60%;
+    position: absolute;
+    top: 35rem;
+    right: 5rem;
+    box-shadow: $color-5 -20px 20px;
+
+    .contact-form {
+        input {
+            background-color: $color-3;
+        }
+
+        .text-submit { 
+            textarea {
+                background-color: $color-3;
+            }
+
+            .button-2 {
+                text-transform: uppercase;
+            }
+
+
+        }
+    }
+}
+
+.contact {
+    padding: 15% 0 15% 0;
+
+    .social {
+        margin-bottom: 2rem;
+    }
+    
+    .contact-info{ 
+    line-height: 1.5rem;
+
+        .email-address {
+            padding: 2rem 0;
+        }
+    }
+}
+
+
 
 
 

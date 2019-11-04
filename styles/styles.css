@@ -330,12 +330,27 @@ a {
   text-transform: uppercase;
 }
 
-i {
+a.email-address {
+  font-family: "Pompiere";
+  font-size: 3rem;
+  letter-spacing: 0.13rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #4C0341;
+}
+
+i.about-icon {
   font-size: 3rem;
   background: #4C0341;
   color: #FFFFFF;
   border-radius: 50%;
   padding: 15px;
+}
+
+i.contact-icon {
+  font-size: 2rem;
+  color: #4C0341;
+  padding: 5px 20px 5px 0;
 }
 
 .button {
@@ -743,11 +758,12 @@ aside .aside-content .aside-copy p {
   font-weight: bold;
 }
 
-.blog-area .comment-submit {
+.comment-submit {
   padding: 3rem 2rem;
 }
 
-.blog-area .comment-form input {
+form.comment-form input,
+form.contact-form input {
   border: none;
   padding: 2rem;
   margin: 2rem 0;
@@ -755,7 +771,8 @@ aside .aside-content .aside-copy p {
   background-color: #FAE5FF;
 }
 
-.blog-area .comment-form .user-details {
+form.comment-form .user-details,
+form.contact-form .user-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -764,12 +781,15 @@ aside .aside-content .aside-copy p {
           justify-content: space-between;
 }
 
-.blog-area .comment-form .user-details .name,
-.blog-area .comment-form .user-details .email {
+form.comment-form .user-details .name,
+form.comment-form .user-details .email,
+form.contact-form .user-details .name,
+form.contact-form .user-details .email {
   width: 45%;
 }
 
-.blog-area .comment-form .text-submit {
+form.comment-form .text-submit,
+form.contact-form .text-submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -780,13 +800,82 @@ aside .aside-content .aside-copy p {
   width: 100%;
 }
 
-.blog-area .comment-form .text-submit textarea {
+form.comment-form .text-submit textarea,
+form.contact-form .text-submit textarea {
   background-color: #FAE5FF;
   border: 1px solid #FE6F19;
   padding: 2rem;
 }
 
-.blog-area .comment-form .text-submit button {
+form.comment-form .text-submit button,
+form.contact-form .text-submit button {
   border: none;
   margin: 3rem 0;
+}
+
+.contact-page {
+  background-image: url("./assets/contact-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+}
+
+.contact-page .title {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-contact {
+  display: relative;
+}
+
+.contact-form-area {
+  padding: 3rem;
+  width: 60%;
+  position: absolute;
+  top: 35rem;
+  right: 5rem;
+  -webkit-box-shadow: #FE6F19 -20px 20px;
+          box-shadow: #FE6F19 -20px 20px;
+}
+
+.contact-form-area .contact-form input {
+  background-color: #FFFFFF;
+}
+
+.contact-form-area .contact-form .text-submit textarea {
+  background-color: #FFFFFF;
+}
+
+.contact-form-area .contact-form .text-submit .button-2 {
+  text-transform: uppercase;
+}
+
+.contact {
+  padding: 15% 0 15% 0;
+}
+
+.contact .social {
+  margin-bottom: 2rem;
+}
+
+.contact .contact-info {
+  line-height: 1.5rem;
+}
+
+.contact .contact-info .email-address {
+  padding: 2rem 0;
 }
