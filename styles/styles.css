@@ -211,14 +211,14 @@ html {
 }
 
 .wrapper {
-  max-width: 1280px;
-  width: 90%;
+  max-width: 3840px;
+  width: 85%;
   margin: 0 auto;
 }
 
 body {
-  font-family: "Lato", sans-serif;
   font-family: "Pompiere";
+  font-family: "Lato", sans-serif;
 }
 
 img {
@@ -814,6 +814,7 @@ form.contact-form .text-submit button {
 }
 
 .contact-page {
+  grid-area: contact-page-header;
   background-image: url("./assets/contact-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -839,15 +840,29 @@ form.contact-form .text-submit button {
 }
 
 .main-contact {
-  display: relative;
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+  -ms-grid-rows: 3fr;
+      grid-template-rows: 3fr;
+  grid-auto-rows: minmax(-webkit-min-content, -webkit-max-content);
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-auto-rows: 100%;
+      grid-template-areas: "contact-us contact-form-area";
+  position: relative;
 }
 
 .contact-form-area {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contact-form-area;
   padding: 3rem;
-  width: 60%;
+  margin: 3rem;
   position: absolute;
-  top: 35rem;
-  right: 5rem;
+  top: -15rem;
   -webkit-box-shadow: #FE6F19 -20px 20px;
           box-shadow: #FE6F19 -20px 20px;
 }
@@ -864,18 +879,21 @@ form.contact-form .text-submit button {
   text-transform: uppercase;
 }
 
-.contact {
-  padding: 15% 0 15% 0;
+.contact-us {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: contact-us;
+  padding: 8rem 2rem 8rem 6rem;
 }
 
-.contact .social {
+.contact-us .social {
   margin-bottom: 2rem;
 }
 
-.contact .contact-info {
-  line-height: 1.5rem;
+.contact-us .contact-info {
+  line-height: 1.8rem;
 }
 
-.contact .contact-info .email-address {
+.contact-us .contact-info .email-address {
   padding: 2rem 0;
 }

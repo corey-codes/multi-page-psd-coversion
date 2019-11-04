@@ -14,6 +14,10 @@ $color-5: #FE6F19;    //rgba(254, 111, 25)
 $color-4: #FAE5FF;    //rgba(250, 229, 255)
 $color-6: #882C07;     //rgba(136, 44, 7)
 
+// FONTS
+$font-1: "Pompiere";
+$font-2: "Lato";
+
 
 // GENERAL FORMATTING ======================
 
@@ -22,20 +26,16 @@ html {
 }
 
 .wrapper {
-    max-width: 1280px;
-    width: 90%;
+    max-width: 3840px;
+    width: 85%;
     margin: 0 auto;
 }
-
-// * {
-//     border: 1px solid red;
-// }
 
 // BODY STYLES ==============================
 
 body {
-    font-family: "Lato", sans-serif;
     font-family: "Pompiere";
+    font-family: "Lato", sans-serif;
 }
 
 img {
@@ -49,7 +49,7 @@ h4,
 h5,
 h6,
 .logo {
-    font-family: "Pompiere";
+    font-family: $font-1;
     margin: 0;
     color: $color-2;
     
@@ -101,7 +101,7 @@ li,
 a,
 ::placeholder,
 button {
-    font-family: "Lato";
+    font-family: $font-2;
     font-size: 2rem;
     letter-spacing: 0.1rem;
 }
@@ -116,7 +116,7 @@ a {
 }
 
 a.email-address {
-    font-family: "Pompiere";
+    font-family: $font-1;
     font-size: 3rem;
     letter-spacing: 0.13rem;
     text-transform: uppercase;
@@ -579,6 +579,7 @@ form.contact-form {
 // CONTACT HEADER =====================
 
 .contact-page {
+    grid-area: contact-page-header;
     background-image: url("./assets/contact-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -599,15 +600,24 @@ form.contact-form {
 // CONTACT FORM STYLES ===================
 
 .main-contact {
-    display: relative;
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 3fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-auto-rows: 100%;
+    grid-template-areas: 
+        "contact-us contact-form-area";
+    position: relative;
 }
 
 .contact-form-area {
+    grid-area: contact-form-area;
     padding: 3rem;
-    width: 60%;
+    margin: 3rem;
     position: absolute;
-    top: 35rem;
-    right: 5rem;
+    top: -15rem;
+    // right: 5rem;
     box-shadow: $color-5 -20px 20px;
 
     .contact-form {
@@ -623,21 +633,21 @@ form.contact-form {
             .button-2 {
                 text-transform: uppercase;
             }
-
-
         }
     }
 }
 
-.contact {
-    padding: 15% 0 15% 0;
+.contact-us {
+    grid-area: contact-us;
+    // padding: 15% 5% 15% 5%;
+    padding: 8rem 2rem 8rem 6rem;
 
     .social {
         margin-bottom: 2rem;
     }
     
     .contact-info{ 
-    line-height: 1.5rem;
+    line-height: 1.8rem;
 
         .email-address {
             padding: 2rem 0;
@@ -646,8 +656,16 @@ form.contact-form {
 }
 
 
+// ***********************************
+
+// MEDIA QUERIES 
+
+// ***********************************
 
 
+// MAX WIDTH ???  =====================
+
+@import "./partials/media-queries";
 
 
     
