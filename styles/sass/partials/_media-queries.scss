@@ -2,49 +2,91 @@
 
 // MEDIA QUERIES 
 
-// ***********************************
+// XL SCREENS - MIN WIDTH 2100PX MAX HEIGHT 2160 =======================
+
+@media (min-width: 2100px) {
+
+	html {
+		font-size: 200%;
+	}
+
+	// .new-additions-copy {
+	// 	// padding-bottom: 60%;
+	// }
+
+	// .too-many-options-copy {
+	// 	// padding-top: 100%;
+	// }
+}
+
+// LARGE DESKTOPS - MIN WIDTH 1356   MAX HEIGHT 1024PX ========================
+
+@media (min-width: 1700px) {
+
+	html {
+		font-size: 125%;
+	}
+}
 
 
-// MAX WIDTH =====================
 
 
-@media all and (max-width: 850px) {
+
+
+
+
+// SMALL SCREEN 320PX-960PX =====================
+
+@media only screen and (min-width: 320px) and (max-width: 960px) {
+
+	body {
+		flex-direction: column;
+		
+	}
+	
+	nav .logo,
+	.title h1 {
+		color: $color-3;
+	}
+	
 	.hamburger,
 	.exit-responsive {
 		display: block;
-		font-size: 2rem;
+		font-size: 2rem;	
 	}
-
+	
+// INDEX PG ==========================
 	.menu  {
 		display: none;
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
-		// bottom: 0;
+		bottom: 0;
 		background: $color-2;
 		width: 100%;
 		
 		ul {
-		   flex-direction: column;
-		   text-align: center;
-		   padding: 0;
+			flex-direction: column;
+			text-align: center;
+			padding: 0;
 			
-		   li.exit-responsive {
-			   text-align: right;
-			   color: white;
-		   }
-
-		   li {
-			 padding: 2rem;
-			 
-		   }
-	    }	
+			li.exit-responsive {
+				text-align: right;
+				color: white;
+			}
+			
+			li {
+				padding: 2rem;
+				
+			}
+		}	
 	}
 
-	nav.all-pages-nav ul li {
-		margin-left: 0;
-		a {
+		
+		nav.all-pages-nav ul li {
+			margin-left: 0;
+			a {
 			color: white;
 		}
 	}
@@ -55,5 +97,82 @@
 		width: 100%;
 		padding: 4rem;
 	}
+	
+	main {
+		.float-img-1 {
+			display: none;
+		}
+	}
+	
+	.under-the-sea {
+		padding: 10rem 0;
+	}
 
-}
+	.new-stuff {
+		padding-top: 5rem;
+		grid-template-columns: 1fr;
+		align-content: center;
+		grid-template-areas: 
+		"new-additions-img" 
+		"new-additions-copy"
+		"too-many-options-img"
+		"too-many-options-copy";
+
+		.new-additions-img,
+		.too-many-options-img  {
+			img {
+				position: static;
+				box-shadow: none;
+			}
+		}
+		.new-additions-copy,
+		.too-many-options-copy {
+			padding: 2% 3%;
+			text-align: left;
+
+		}
+
+	}
+
+	.about {	
+		display: flex;
+		flex-direction: column;
+
+
+		a,
+		h3 {
+			text-align: center;
+		}
+
+		.about-copy {
+			padding: 2%;
+		}
+	
+	}
+
+	.popular {
+		flex-direction: column;
+		.popular-month-img {
+			width: 100%;
+
+			img { 
+				box-shadow: none;
+			}
+		}
+
+		.popular-month-copy {
+			width: 100%;
+
+				h4,
+				a {
+					text-align: center;
+				}
+
+		}
+	}
+
+// BLOG ==========================
+
+	
+
+} //END - SMALL SCREENS QUERY

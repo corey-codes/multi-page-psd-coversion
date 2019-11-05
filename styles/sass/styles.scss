@@ -270,40 +270,44 @@ nav.all-pages-nav {
 // NEW-STUFF ============================
 
 .new-stuff {
+    padding: 70px 0;   
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10rem;
-    padding: 70px 0;  
-    // position: relative;  
-
-    .new-additions-img {
-        position: relative;
-
-        img {
-            position: absolute;
-            top: -90px;
-            box-shadow: $color-5 20px 20px;
-
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    row-gap: 5rem;
+    column-gap: 8%;
+    grid-template-areas: 
+        "new-additions-img new-additions-copy"
+        "too-many-options-copy too-many-options-img";
+       
+        .new-additions-img {
+            position: relative;
+            
+            img {
+                grid-area: new-additions-img;
+                position: absolute;
+                top: -9rem;
+                box-shadow: $color-5 20px 20px;
+            }
         }
-    }
 
     .new-additions-copy {
-        padding-right: 10%;
+        grid-area: new-additions-copy;
+        padding: 5% 10% 1% 1%;
     }
  
     .too-many-options-copy {
-        padding-left: 10%;
+        grid-area: too-many-options-copy;
+        padding: 1% 1% 5% 10%;
         text-align: right;
     }
     
     .too-many-options-img {
+        grid-area: too-many-options-img;
         position: relative;
 
         img {
             position: absolute;
-            bottom: -70px;
-            // z-index: 1;
+            bottom: -7rem;
             box-shadow: $color-5 -20px 20px;
         }
     }
@@ -320,8 +324,8 @@ nav.all-pages-nav {
     grid-template-columns: auto-fit 4fr auto-fit 4fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
-        'about-icon-1 about-copy-1 about-icon-2 about-copy-2 '
-        'about-icon-3 about-copy-3 about-icon-4 about-copy-4';
+        "about-icon-1 about-copy-1 about-icon-2 about-copy-2"
+        "about-icon-3 about-copy-3 about-icon-4 about-copy-4";
     
     // GRID AREAS
     .about-icon-1 {
@@ -442,7 +446,6 @@ header.blog-page {
 .blog-main {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    // grid-template-rows: repeat(2, 1fr);
     grid-template-rows: 1fr;
     column-gap: 2rem;
 }
@@ -608,7 +611,7 @@ form.contact-form {
     background-image: url("./assets/contact-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    // background-position: center;
     height: 80vh;
 
     .title {
@@ -641,7 +644,8 @@ form.contact-form {
     padding: 3rem;
     margin: 3rem;
     position: absolute;
-    top: -15rem;
+    // top: -15rem;
+    top: -30%;
     box-shadow: $color-5 -20px 20px;
 
     .contact-form {
@@ -659,12 +663,12 @@ form.contact-form {
 
 .contact-us {
     grid-area: contact-us;
-    padding: 8rem 2rem 8rem 6rem;
+    padding: 12rem 2rem 12rem 6rem;
 }
 
 .social {
     display: flex;
-    padding: 2rem 0;
+    padding: 4rem 0;
     transition: 2s;
 
     ul {
@@ -685,7 +689,13 @@ form.contact-form {
 }
     
 .contact-info{ 
-line-height: 1.8rem;
+    
+    .email {
+        margin-bottom: 1rem;
+    }
+    p {
+        margin: 0;
+    }
 
     a:hover {
         color: $color-5;
