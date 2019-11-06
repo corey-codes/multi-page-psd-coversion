@@ -40,26 +40,26 @@
 @media only screen and (min-width: 320px) and (max-width: 960px) {
 
 	html {
-		font-size: 40%;
+		font-size: 50%;
 	}
 
 	body {
 		flex-direction: column;
 		
 	}
+
+// NAV - ALL PAGES ==============
 	
-	nav .logo,
-	.title h1 {
+	.nav-icon {
 		color: $color-3;
-	}
-	
+	}	
+
 	.hamburger,
 	.exit-responsive {
 		display: block;
 		font-size: 2rem;	
 	}
 	
-// INDEX PG ==========================
 	.menu  {
 		display: none;
 		position: absolute;
@@ -67,7 +67,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: $color-2;
+		background: $color-4;
 		width: 100%;
 		
 		ul {
@@ -77,7 +77,7 @@
 			
 			li.exit-responsive {
 				text-align: right;
-				color: white;
+				color: $color-2;
 			}
 			
 			li {
@@ -87,11 +87,21 @@
 		}	
 	}
 
-		
-		nav.all-pages-nav ul li {
+	nav.all-pages-nav { 
+		background-color: $color-2;
+		padding: 2rem;
+		width: 100%;
+	
+		ul li {
 			margin-left: 0;
-			a {
-			color: white;
+		}
+
+		p {
+			color: $color-3;
+		}
+
+		a {
+			color: $color-3;
 		}
 	}
 
@@ -100,6 +110,23 @@
 		text-align: center;
 		width: 100%;
 		padding: 4rem;
+	}
+
+// INDEX PAGE =============== 
+
+	header.index-page {
+		height: 80vh;
+		position: static;
+
+		.title {
+			justify-content: center;
+			
+			h1 {
+				width: 100%;
+				padding: 4rem;
+				background-color: (rgba(255,255,255,0.6));
+			}
+		}
 	}
 	
 	main {
@@ -113,7 +140,7 @@
 	}
 
 	.new-stuff {
-		padding-top: 5rem;
+		padding: 5rem 2rem;
 		grid-template-columns: 1fr;
 		align-content: center;
 		grid-template-areas: 
@@ -133,15 +160,12 @@
 		.too-many-options-copy {
 			padding: 2% 3%;
 			text-align: left;
-
 		}
-
 	}
 
 	.about {	
 		display: flex;
 		flex-direction: column;
-
 
 		a,
 		h3 {
@@ -156,8 +180,11 @@
 
 	.popular {
 		flex-direction: column;
+		padding: 6rem 0;
+		
 		.popular-month-img {
 			width: 100%;
+			padding: 0;
 
 			img { 
 				box-shadow: none;
@@ -166,16 +193,33 @@
 
 		.popular-month-copy {
 			width: 100%;
+			padding-top: 6rem;
 
-				h4,
-				a {
-					text-align: center;
-				}
+			h4,
+			a {
+				text-align: center;
+			}
+		}
+	}
 
+	.gallery {
+		img:nth-child(2) {
+        margin: 0;
+	}
+		.gallery-1 {
+			display: none;
+		}
+
+		.gallery-3  {
+			margin-left: 2rem;
 		}
 	}
 
 // BLOG ==========================
+
+	header.blog-page {
+		// CROP THIS PHOTO TO BETTER SUIT SMALLER SCREENS
+	}
 
 	.blog-main {
 		display: flex;
@@ -191,6 +235,7 @@
 		.aside-img {
 			position: static;
 			width: 100%;
+			z-index: inherit;
 		}
 
 		.aside-content {
@@ -273,6 +318,7 @@
 		padding: 2rem;
 		margin-bottom: 5rem;
 	}
-	
 
 } //END - SMALL SCREENS QUERY
+
+// MEDIUM SCREENS 768PX -  ====================

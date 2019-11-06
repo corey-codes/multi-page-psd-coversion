@@ -231,7 +231,8 @@ h3,
 h4,
 h5,
 h6,
-.logo {
+.logo,
+.nav-icon {
   font-family: "Pompiere";
   margin: 0;
   color: #4C0341;
@@ -419,7 +420,7 @@ header.index-page {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("./assets/header-image.jpg");
+  background-image: url("./assets/rs-header-image.jpg");
   height: 95vh;
   background-size: cover;
   background-position: center center;
@@ -435,7 +436,9 @@ header.index-page .title {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-top: 8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header.index-page .title h1 {
@@ -983,7 +986,7 @@ form.contact-form .text-submit button {
 
 @media only screen and (min-width: 320px) and (max-width: 960px) {
   html {
-    font-size: 40%;
+    font-size: 50%;
   }
   body {
     -webkit-box-orient: vertical;
@@ -991,8 +994,7 @@ form.contact-form .text-submit button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  nav .logo,
-  .title h1 {
+  .nav-icon {
     color: #FFFFFF;
   }
   .hamburger,
@@ -1007,7 +1009,7 @@ form.contact-form .text-submit button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #4C0341;
+    background: #FAE5FF;
     width: 100%;
   }
   .menu ul {
@@ -1020,22 +1022,44 @@ form.contact-form .text-submit button {
   }
   .menu ul li.exit-responsive {
     text-align: right;
-    color: white;
+    color: #4C0341;
   }
   .menu ul li {
     padding: 2rem;
   }
+  nav.all-pages-nav {
+    background-color: #4C0341;
+    padding: 2rem;
+    width: 100%;
+  }
   nav.all-pages-nav ul li {
     margin-left: 0;
   }
-  nav.all-pages-nav ul li a {
-    color: white;
+  nav.all-pages-nav p {
+    color: #FFFFFF;
+  }
+  nav.all-pages-nav a {
+    color: #FFFFFF;
   }
   .menu ul a {
     font-size: 3rem;
     text-align: center;
     width: 100%;
     padding: 4rem;
+  }
+  header.index-page {
+    height: 80vh;
+    position: static;
+  }
+  header.index-page .title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header.index-page .title h1 {
+    width: 100%;
+    padding: 4rem;
+    background-color: rgba(255, 255, 255, 0.6);
   }
   main .float-img-1 {
     display: none;
@@ -1044,7 +1068,7 @@ form.contact-form .text-submit button {
     padding: 10rem 0;
   }
   .new-stuff {
-    padding-top: 5rem;
+    padding: 5rem 2rem;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-flex-line-pack: center;
@@ -1083,9 +1107,11 @@ form.contact-form .text-submit button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 6rem 0;
   }
   .popular .popular-month-img {
     width: 100%;
+    padding: 0;
   }
   .popular .popular-month-img img {
     -webkit-box-shadow: none;
@@ -1093,10 +1119,20 @@ form.contact-form .text-submit button {
   }
   .popular .popular-month-copy {
     width: 100%;
+    padding-top: 6rem;
   }
   .popular .popular-month-copy h4,
   .popular .popular-month-copy a {
     text-align: center;
+  }
+  .gallery img:nth-child(2) {
+    margin: 0;
+  }
+  .gallery .gallery-1 {
+    display: none;
+  }
+  .gallery .gallery-3 {
+    margin-left: 2rem;
   }
   .blog-main {
     display: -webkit-box;
@@ -1120,6 +1156,7 @@ form.contact-form .text-submit button {
   aside .aside-img {
     position: static;
     width: 100%;
+    z-index: inherit;
   }
   aside .aside-content {
     position: static;
