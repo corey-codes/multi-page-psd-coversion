@@ -986,7 +986,7 @@ form.contact-form .text-submit button {
 
 @media only screen and (min-width: 320px) and (max-width: 960px) {
   html {
-    font-size: 50%;
+    font-size: 45%;
   }
   body {
     -webkit-box-orient: vertical;
@@ -1047,19 +1047,18 @@ form.contact-form .text-submit button {
     width: 100%;
     padding: 4rem;
   }
+  .index-title h1,
+  .blog-title h1,
+  .contact-title h1 {
+    padding: 2rem 3rem 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
   header.index-page {
     height: 80vh;
     position: static;
   }
-  header.index-page .title {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   header.index-page .title h1 {
     width: 100%;
-    padding: 4rem;
-    background-color: rgba(255, 255, 255, 0.6);
   }
   main .float-img-1 {
     display: none;
@@ -1134,6 +1133,17 @@ form.contact-form .text-submit button {
   .gallery .gallery-3 {
     margin-left: 2rem;
   }
+  header.blog-page {
+    background-image: url("./assets/small-screen-blog-header.jpg");
+    background-position: right;
+    height: 80vh;
+  }
+  header.blog-page .blog-title {
+    padding: 2rem;
+  }
+  header.blog-page .blog-title h1 {
+    padding: 4rem;
+  }
   .blog-main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1180,23 +1190,26 @@ form.contact-form .text-submit button {
   .blog-area .blog-post {
     padding: 8% 3%;
   }
-  .user-comment-1,
-  .user-comment-2 {
+  .blog-area .comments .user-comment-1,
+  .blog-area .comments .user-comment-2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .user-comment-1 .user-photo,
-  .user-comment-2 .user-photo {
-    display: inline-block;
+    padding: 2rem;
     width: 100%;
-    min-height: 40px;
   }
-  .user-comment-1 .user-photo img,
-  .user-comment-2 .user-photo img {
+  .blog-area .comments .user-comment-1 .user-photo,
+  .blog-area .comments .user-comment-2 .user-photo {
+    width: 20%;
+    margin-top: 0;
+  }
+  .blog-area .comments .user-comment-1 .posted-comment-1,
+  .blog-area .comments .user-comment-1 .posted-comment-2,
+  .blog-area .comments .user-comment-2 .posted-comment-1,
+  .blog-area .comments .user-comment-2 .posted-comment-2 {
+    margin-left: 0;
     width: 100%;
-    display: inline-block;
   }
   form.comment-form .user-details,
   form.contact-form .user-details {
@@ -1214,6 +1227,14 @@ form.contact-form .text-submit button {
   form.comment-form .text-submit textarea,
   form.contact-form .text-submit textarea {
     margin-top: 3rem;
+  }
+  .contact-page .title {
+    padding: 2rem;
+  }
+  .contact-page .title h1 {
+    padding: 4rem;
+    text-align: center;
+    line-height: 8rem;
   }
   .main-contact {
     display: -webkit-box;

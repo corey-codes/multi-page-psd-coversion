@@ -10,13 +10,6 @@
 		font-size: 200%;
 	}
 
-	// .new-additions-copy {
-	// 	// padding-bottom: 60%;
-	// }
-
-	// .too-many-options-copy {
-	// 	// padding-top: 100%;
-	// }
 }
 
 // LARGE DESKTOPS - MIN WIDTH 1356   MAX HEIGHT 1024PX ========================
@@ -29,18 +22,12 @@
 }
 
 
-
-
-
-
-
-
 // SMALL SCREEN 320PX-960PX =====================
 
 @media only screen and (min-width: 320px) and (max-width: 960px) {
 
 	html {
-		font-size: 50%;
+		font-size: 45%;
 	}
 
 	body {
@@ -112,6 +99,16 @@
 		padding: 4rem;
 	}
 
+// HEADER TITLES ===========
+	.index-title,
+	.blog-title,
+	.contact-title {
+		h1 {
+			padding: 2rem 3rem 2rem 1rem;
+			background-color: (rgba(255,255,255,0.6));
+		}
+	}
+
 // INDEX PAGE =============== 
 
 	header.index-page {
@@ -119,12 +116,9 @@
 		position: static;
 
 		.title {
-			justify-content: center;
 			
 			h1 {
 				width: 100%;
-				padding: 4rem;
-				background-color: (rgba(255,255,255,0.6));
 			}
 		}
 	}
@@ -218,7 +212,17 @@
 // BLOG ==========================
 
 	header.blog-page {
-		// CROP THIS PHOTO TO BETTER SUIT SMALLER SCREENS
+		background-image: url("./assets/small-screen-blog-header.jpg");
+		background-position: right;
+		height: 80vh;
+
+		.blog-title {
+			padding: 2rem;
+			h1 {
+				padding: 4rem;
+
+			}
+		}
 	}
 
 	.blog-main {
@@ -264,20 +268,25 @@
 		.blog-post {
 			padding: 8% 3%;
 		}
-	}
-
-	.user-comment-1,
-	.user-comment-2 {
-		flex-direction: column;
-
-		.user-photo {	
-			display: inline-block;
-			width: 100%;
-			min-height: 40px;
-
-			img {
+		
+		.comments {
+			
+			.user-comment-1,
+			.user-comment-2 {
+				flex-direction: column;
+				padding: 2rem;
 				width: 100%;
-				display: inline-block;
+				
+				.user-photo {	
+					width: 20%;
+					margin-top: 0;
+				}
+				
+				.posted-comment-1,
+				.posted-comment-2 {
+					margin-left: 0;
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -303,6 +312,19 @@
 
 // CONTACT PG ===========
 
+	.contact-page {
+		
+		.title {
+			padding: 2rem;
+
+			h1 {
+				padding: 4rem;
+				text-align: center;
+				line-height: 8rem;
+			}
+		}
+	}
+
 	.main-contact {
 		display: flex;
 		flex-direction: column;
@@ -321,4 +343,13 @@
 
 } //END - SMALL SCREENS QUERY
 
-// MEDIUM SCREENS 768PX -  ====================
+// MEDIUM SCREENS 620PX -  ====================
+
+
+
+
+
+
+
+
+

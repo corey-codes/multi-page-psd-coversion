@@ -433,7 +433,6 @@ header.blog-page {
     background-position: center;
     height: 70vh;
 
-    // THE HEIGHT ON THIS ISN'T WORKING LIKE IT SHOULD HAD TO REDUCE FROM 100% TO 80%
      .blog-title {
          display: flex;
          height: 80%;
@@ -613,7 +612,6 @@ form.contact-form {
     background-image: url("./assets/contact-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    // background-position: center;
     height: 80vh;
 
     .title {
