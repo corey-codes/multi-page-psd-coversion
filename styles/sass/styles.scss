@@ -46,6 +46,7 @@ img {
 h1,
 h2,
 h3,
+.h3-header,
 h4,
 h5,
 h6,
@@ -57,6 +58,7 @@ h6,
 }
 
 h3,
+.h3-header,
 h4,
 h5,
 h6 {
@@ -74,7 +76,8 @@ h2 {
   line-height: 9.2rem;  
 }
 
-h3 {
+h3,
+.h3-header {
     font-size: 5.2rem;
     letter-spacing: 0.16rem;
 }
@@ -147,7 +150,16 @@ i.about-icon {
     color: $color-3;
     border-radius: 50%;
     padding: 15px;
+
+    &:hover {
+        background-color: $color-5;
+    }
 }
+
+.h3-header:hover {
+    color: $color-5;
+}
+
 
 i.contact-icon {
     font-size: 2rem;
@@ -436,7 +448,9 @@ footer {
 // BLOG HEADER =====================
 
 header.blog-page {
-    background-image: url("./assets/blog-header.jpg");
+    background-image: url("./assets/small-screen-blog-header.jpg");
+	background-position: right;
+    
     height: 70vh;
 
      .blog-title {
