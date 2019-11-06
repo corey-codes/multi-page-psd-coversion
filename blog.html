@@ -63,40 +63,8 @@
 <!-- MAIN BLOG ---------------------------->
     <main class="blog-main background-1">
 
-<!-- ASIDE -->
-        <aside>
-                
-                <img src="./styles/assets/sidebar-image.jpg"
-                alt="Close up of of a a pair of feet wearing black Nike sneakers jumping in a puddle" class="aside-img">
-                
-            <div class="aside-content hero-header">
-
-                <div class="aside-copy wrapper">
-                    <h6>Any weather</h6>
-                
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente, unde mollitia voluptatem maxime.</p>
-                
-                    <h6>Recent posts</h6>
-                
-                    <ul class="recent-posts">
-                
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Maxime veniam elit</li>
-                        <li>Harum error quis aliquid</li>
-                        <li>Tempore aut officiis minima</li>
-                
-                    </ul>
-    
-                </div>
-
-            </div>
-        
-        </aside>
-
-
-
 <!-- BLOG POST -->
-        <div class="blog-area">    
+        <div class="blog-area grid-area">    
 
             <article class="blog">
 
@@ -122,71 +90,106 @@
 
             </article>
 
+<!-- ASIDE -->
+    <aside class="aside-container grid-area">
+        
+        <div class="aside-section">
+            
+            <img src="./styles/assets/sidebar-image.jpg"
+                alt="Close up of of a a pair of feet wearing black Nike sneakers jumping in a puddle" class="aside-img">
+    
+            <div class="aside-content">
+    
+                <div class="aside-copy wrapper">
+                    <h6>Any weather</h6>
+    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sapiente, unde mollitia voluptatem maxime.
+                    </p>
+    
+                    <h6>Recent posts</h6>
+    
+                    <ul class="recent-posts">
+    
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Maxime veniam elit</li>
+                        <li>Harum error quis aliquid</li>
+                        <li>Tempore aut officiis minima</li>
+    
+                    </ul>
+    
+                </div>
+    
+            </div>
+        </div>
+
+    </aside>
+
+
 <!-- COMMENTS ------------------------------->
-            <div class="comments">
+    <div class="comments comment-section grid-area">
 
-                <h3>Comments:</h3>
+        <h3>Comments:</h3>
 
-                    <div class="user-comment-1">
+            <div class="user-comment-1">
 
-                        <div class="user-photo">
-                            <img src="./styles/assets/comment-1.jpg" alt="User profile picture">
-                        </div>
+                <div class="user-photo">
+                    <img src="./styles/assets/comment-1.jpg" alt="User profile picture">
+                </div>
 
-                        <div class="posted-comment-1">
-                            <p class="date">Tuesday, November 21st, 2019 by Jeremy</p>
-    
-                            <p class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur velit distinctio sunt. Maiores distinctio, quam harum tempora iure magnam incidunt recusandae in ipsum, eum tenetur officia! Voluptatum quia quam minus.</p>
-                        </div>
+                <div class="posted-comment-1">
+                    <p class="date">Tuesday, November 21st, 2019 by Jeremy</p>
 
-                    </div>
+                    <p class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur velit distinctio sunt. Maiores distinctio, quam harum tempora iure magnam incidunt recusandae in ipsum, eum tenetur officia! Voluptatum quia quam minus.</p>
+                </div>
 
-                    <div class="user-comment-2">
+            </div>
 
-                        <div class="user-photo">
-                            <img src="./styles/assets/comment-2.jpg" alt="user profile picture">
-                        </div>
+            <div class="user-comment-2">
 
-                        <div class="posted-comment-2">
-                            <p class="date">Wednesday, November 10th, 2019 by Julia</p>
-    
-                            <p class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur velit distinctio sunt.
-                            Maiores distinctio, quam harum tempora iure magnam incidunt recusandae in ipsum, eum tenetur officia! Voluptatum
-                            quia quam minus.</p>
-                        </div>
+                <div class="user-photo">
+                    <img src="./styles/assets/comment-2.jpg" alt="user profile picture">
+                </div>
 
-                    </div>
-            </div>  
+                <div class="posted-comment-2">
+                    <p class="date">Wednesday, November 10th, 2019 by Julia</p>
+
+                    <p class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur velit distinctio sunt.
+                    Maiores distinctio, quam harum tempora iure magnam incidunt recusandae in ipsum, eum tenetur officia! Voluptatum
+                    quia quam minus.</p>
+                </div>
+
+            </div>
+            <!-- </div>   -->
 
     <!-- COMMENT FORM ---------------------->
-                <div class="comment-submit">
+            <div class="comment-submit comment-form-section">
 
-                    <form action="submit" class="comment-form">
+                <form action="submit" class="comment-form">
+                
+                    <div class="user-details">
+
+                        <label for="name" class="visually-hidden">Name</label>
+                        <input type="text" id="name" class="name" placeholder="Name">
                     
-                        <div class="user-details">
+                        <label for="email" class="visually-hidden">Email address</label>
+                        <input type="email" id="email" class="name" placeholder="Email address">
 
-                            <label for="name" class="visually-hidden">Name</label>
-                            <input type="text" id="name" class="name" placeholder="Name">
-                        
-                            <label for="email" class="visually-hidden">Email address</label>
-                            <input type="email" id="email" class="name" placeholder="Email address">
+                    </div>
+                
+                    <div class="text-submit">
 
-                        </div>
+                        <textarea name="message" id="message"  cols="30" rows="10" placeholder="Comment"></textarea>
                     
-                        <div class="text-submit">
+                        <button class="submit button-1">Post Comment</button>
 
-                            <textarea name="message" id="message"  cols="30" rows="10" placeholder="Comment"></textarea>
-                        
-                            <button class="submit button-1">Post Comment</button>
+                    </div>
+                
+                </form>
 
-                        </div>
-                    
-                    </form>
-
-                </div>
+            </div>
             <!-- </div> -->
         
-        </div>
+    </div>
 
     </main>
 
@@ -200,7 +203,7 @@
     </div>
 <!--JQUERY CDN ------------------------------>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <!-- JAVASCRIPT ------------------------------>
     <script src="./script/script.js"></script>

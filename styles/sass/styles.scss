@@ -450,53 +450,31 @@ header.blog-page {
 
 // BLOG MAIN ============================
 
-.blog-main {
+main.blog-main {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr;
+    // grid-template-rows: auto auto auto;
     column-gap: 2rem;
-}
-    
-// ASIDE ============================
-aside { 
-    display: flex; 
-    padding: 5rem 0.5rem 1rem 5rem;
-    position: relative;
-    
-    .aside-img {
-        position: absolute;
-        left: 0;
-        width: 85%;
-        z-index: 5;
-    }
+    grid-template-areas:
+        "aside-section blog-section"
+        "aside-section comment-section"
+        "aside-section comment-form-section";
 
-    .aside-content {
-        background-color: $color-3;
-        padding: 1rem 2rem 1rem 1rem;
-        width: 70%;
-        position: absolute;
-        left: 9rem;
-        top: 7rem;
-
-        .aside-copy {
-            padding-top: 110%;
-
-            h6 {
-                margin: 4rem 0 1rem 0;
+        aside.aside-section { 
+            grid-area: aside-section;
             }
-
-            p {
-                padding-bottom: 2rem;
-            }
+        
+        article.blog {
+            grid-area: blog-section;
         }
-    }
 }
 
 // BLOG POST =============================
 
 .blog-area {
+    display: grid;
     position: relative;
-    
+
     .blog-img {
         padding-left: 2rem;
         position: absolute;
@@ -597,6 +575,46 @@ form.contact-form {
         button {
             border: none;
             margin: 3rem 0;
+        }
+    }
+}
+
+// ASIDE ============================
+aside { 
+    display: grid;
+    // display: flex; 
+    padding: 5rem 0.5rem 1rem 5rem;
+    position: relative;
+    
+    .aside-section {
+        display: flex;
+        
+        .aside-img {
+            position: absolute;
+            left: 0;
+            width: 85%;
+            z-index: 5;
+        }
+        
+        .aside-content {
+            background-color: $color-3;
+            padding: 1rem 2rem 1rem 1rem;
+            width: 70%;
+            position: absolute;
+            left: 9rem;
+            top: 7rem;
+            
+            .aside-copy {
+                padding-top: 110%;
+                
+                h6 {
+                    margin: 4rem 0 1rem 0;
+                }
+                
+                p {
+                    padding-bottom: 2rem;
+                }
+            }
         }
     }
 }

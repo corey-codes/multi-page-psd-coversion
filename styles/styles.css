@@ -696,54 +696,32 @@ header.blog-page .blog-title {
           align-items: center;
 }
 
-.blog-main {
+main.blog-main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 3fr;
       grid-template-columns: 2fr 3fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
+      grid-template-areas: "aside-section blog-section" "aside-section comment-section" "aside-section comment-form-section";
 }
 
-aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5rem 0.5rem 1rem 5rem;
-  position: relative;
+main.blog-main aside.aside-section {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: aside-section;
 }
 
-aside .aside-img {
-  position: absolute;
-  left: 0;
-  width: 85%;
-  z-index: 5;
-}
-
-aside .aside-content {
-  background-color: #FFFFFF;
-  padding: 1rem 2rem 1rem 1rem;
-  width: 70%;
-  position: absolute;
-  left: 9rem;
-  top: 7rem;
-}
-
-aside .aside-content .aside-copy {
-  padding-top: 110%;
-}
-
-aside .aside-content .aside-copy h6 {
-  margin: 4rem 0 1rem 0;
-}
-
-aside .aside-content .aside-copy p {
-  padding-bottom: 2rem;
+main.blog-main article.blog {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: blog-section;
 }
 
 .blog-area {
+  display: -ms-grid;
+  display: grid;
   position: relative;
 }
 
@@ -861,6 +839,47 @@ form.comment-form .text-submit button,
 form.contact-form .text-submit button {
   border: none;
   margin: 3rem 0;
+}
+
+aside {
+  display: -ms-grid;
+  display: grid;
+  padding: 5rem 0.5rem 1rem 5rem;
+  position: relative;
+}
+
+aside .aside-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+aside .aside-section .aside-img {
+  position: absolute;
+  left: 0;
+  width: 85%;
+  z-index: 5;
+}
+
+aside .aside-section .aside-content {
+  background-color: #FFFFFF;
+  padding: 1rem 2rem 1rem 1rem;
+  width: 70%;
+  position: absolute;
+  left: 9rem;
+  top: 7rem;
+}
+
+aside .aside-section .aside-content .aside-copy {
+  padding-top: 110%;
+}
+
+aside .aside-section .aside-content .aside-copy h6 {
+  margin: 4rem 0 1rem 0;
+}
+
+aside .aside-section .aside-content .aside-copy p {
+  padding-bottom: 2rem;
 }
 
 header.contact-page {
