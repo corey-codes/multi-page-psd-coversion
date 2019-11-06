@@ -1,6 +1,9 @@
 // ***********************************
-
+// 
 // MEDIA QUERIES 
+// 
+// ***********************************
+
 
 // XL SCREENS - MIN WIDTH 2100PX MAX HEIGHT 2160 =======================
 
@@ -10,6 +13,11 @@
 		font-size: 200%;
 	}
 
+	.new-stuff {
+		.new-additions-copy {
+			padding: 10% 10% 30% 10%;
+		}
+	}
 }
 
 // LARGE DESKTOPS - MIN WIDTH 1356   MAX HEIGHT 1024PX ========================
@@ -19,16 +27,46 @@
 	html {
 		font-size: 125%;
 	}
+
 }
 
+// MEDIUM SCREENS & TABLETS MAX 1100PX =============================
 
-// SMALL SCREEN 320PX-960PX =====================
+@media (max-width: 1100px) {
 
-@media only screen and (min-width: 320px) and (max-width: 960px) {
+	nav.all-pages-nav { 
+		background-color: rgba(76, 3, 65,0.7);
+		padding: 2rem;
+		width: 100%;
+	
+		ul li {
+			margin-left: 0;
+			a {
+				color: $color-3;
 
-	html {
-		font-size: 45%;
+				&:hover {
+					background-color: inherit;
+					color: $color-4;
+				}
+
+			}
+		}
+
+		p {
+			color: $color-3;
+		}
+
 	}
+
+}
+
+// SMALL TABLETS & LARGE PHONES 900PX =====================
+
+@media (max-width: 900px) {
+	
+	// html {
+	// 	font-size: 45%;
+	// }
 
 	body {
 		flex-direction: column;
@@ -54,7 +92,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: $color-4;
+		background-color: $color-2;
 		width: 100%;
 		
 		ul {
@@ -64,7 +102,7 @@
 			
 			li.exit-responsive {
 				text-align: right;
-				color: $color-2;
+				color: $color-3;
 			}
 			
 			li {
@@ -72,24 +110,6 @@
 				
 			}
 		}	
-	}
-
-	nav.all-pages-nav { 
-		background-color: $color-2;
-		padding: 2rem;
-		width: 100%;
-	
-		ul li {
-			margin-left: 0;
-		}
-
-		p {
-			color: $color-3;
-		}
-
-		a {
-			color: $color-3;
-		}
 	}
 
 	.menu ul a {
@@ -341,9 +361,18 @@
 		margin-bottom: 5rem;
 	}
 
-} //END - SMALL SCREENS QUERY
+} 
 
-// MEDIUM SCREENS 620PX -  ====================
+// SMALL SCREENS/PHONES 500PX   ====================
+
+@media (max-width: 500px) {
+	
+	html {
+		font-size: 45%;
+	}
+}
+
+
 
 
 

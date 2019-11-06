@@ -53,8 +53,14 @@ h6,
 .nav-icon {
     font-family: $font-1;
     margin: 0;
-    color: $color-2;
-    
+    color: $color-2;  
+}
+
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
 }
 
 h1 {
@@ -71,25 +77,21 @@ h2 {
 h3 {
     font-size: 5.2rem;
     letter-spacing: 0.16rem;
-    text-transform: uppercase;
 }
 
 h4 {
     font-size: 5.2rem;
-    letter-spacing: 0.12rem;
-    text-transform: uppercase;  
+    letter-spacing: 0.12rem; 
 }
 
 h5 {
     font-size: 4.2rem;
     letter-spacing: 0.13rem;
-    text-transform: uppercase;
 }
 
 h6 {
     font-size: 3rem;
     letter-spacing: 0.13rem;
-    text-transform: uppercase;
 }
 
 .logo {
@@ -169,12 +171,14 @@ i.contact-icon {
 
 .button-1 {
     background-color: $color-2;
-        a {
-            margin-top: 20px;
-        }
-        &:hover {
-            background-color: $color-6;
-        }
+        
+    a {
+        margin-top: 20px;
+    }
+
+    &:hover {
+        background-color: $color-6;
+    }
 }
 
 .button-2 {
@@ -193,16 +197,21 @@ i.contact-icon {
     background-color: $color-3;
 }
 
-// HEADER ===============================
+// HERO HEADER STANDARD STYLES ==========
 
-header.index-page {
-    display: flex; //TESTING
-    flex-direction: column; //TESTING
-    background-image: url("./assets/rs-header-image.jpg");
-    height: 95vh;
+header {
+    display: flex;
+    flex-direction: column;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+// HEADER ===============================
+
+header.index-page {
+    background-image: url("./assets/rs-header-image.jpg");
+    height: 95vh;
     position: relative;
 
     .title {
@@ -428,9 +437,6 @@ footer {
 
 header.blog-page {
     background-image: url("./assets/blog-header.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     height: 70vh;
 
      .blog-title {
@@ -505,14 +511,13 @@ aside {
     
     .blog-post {
         padding: 60% 5% 1% 3%;
-
-        
-        
+      
         .date {
             margin-top: 0.1rem;
             padding-bottom: 2rem;
         }
     }
+
 // USER COMMENTS
     .comments {
         padding: 5rem 0;
@@ -552,7 +557,6 @@ aside {
 }
 
 // BLOG & CONTACT FORM STYLES  ================
-
 
 form.comment-form,
 form.contact-form {
@@ -607,11 +611,10 @@ form.contact-form {
 
 // CONTACT HEADER =====================
 
-.contact-page {
+header.contact-page {
     grid-area: contact-page-header;
     background-image: url("./assets/contact-image.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-position: left;
     height: 80vh;
 
     .title {
@@ -625,7 +628,7 @@ form.contact-form {
 
 } 
 
-// CONTACT STYLES ===================
+// MAIN CONTACT STYLES ===================
 
 .main-contact {
     display: grid;
@@ -644,11 +647,11 @@ form.contact-form {
     padding: 3rem;
     margin: 3rem;
     position: absolute;
-    // top: -15rem;
     top: -30%;
     box-shadow: $color-5 -20px 20px;
 
     .contact-form {
+
         input {
             background-color: $color-3;
         }
@@ -693,6 +696,7 @@ form.contact-form {
     .email {
         margin-bottom: 1rem;
     }
+    
     p {
         margin: 0;
     }

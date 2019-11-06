@@ -238,6 +238,13 @@ h6,
   color: #4C0341;
 }
 
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: 11rem;
   line-height: 6.4rem;
@@ -255,25 +262,21 @@ h2 {
 h3 {
   font-size: 5.2rem;
   letter-spacing: 0.16rem;
-  text-transform: uppercase;
 }
 
 h4 {
   font-size: 5.2rem;
   letter-spacing: 0.12rem;
-  text-transform: uppercase;
 }
 
 h5 {
   font-size: 4.2rem;
   letter-spacing: 0.13rem;
-  text-transform: uppercase;
 }
 
 h6 {
   font-size: 3rem;
   letter-spacing: 0.13rem;
-  text-transform: uppercase;
 }
 
 .logo {
@@ -412,7 +415,7 @@ i.contact-icon {
   background-color: #FFFFFF;
 }
 
-header.index-page {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,11 +423,14 @@ header.index-page {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("./assets/rs-header-image.jpg");
-  height: 95vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+header.index-page {
+  background-image: url("./assets/rs-header-image.jpg");
+  height: 95vh;
   position: relative;
 }
 
@@ -674,9 +680,6 @@ footer p {
 
 header.blog-page {
   background-image: url("./assets/blog-header.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 70vh;
 }
 
@@ -860,15 +863,14 @@ form.contact-form .text-submit button {
   margin: 3rem 0;
 }
 
-.contact-page {
+header.contact-page {
   grid-area: contact-page-header;
   background-image: url("./assets/contact-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-position: left;
   height: 80vh;
 }
 
-.contact-page .title {
+header.contact-page .title {
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -976,6 +978,9 @@ form.contact-form .text-submit button {
   html {
     font-size: 200%;
   }
+  .new-stuff .new-additions-copy {
+    padding: 10% 10% 30% 10%;
+  }
 }
 
 @media (min-width: 1700px) {
@@ -984,10 +989,28 @@ form.contact-form .text-submit button {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 960px) {
-  html {
-    font-size: 45%;
+@media (max-width: 1100px) {
+  nav.all-pages-nav {
+    background-color: rgba(76, 3, 65, 0.7);
+    padding: 2rem;
+    width: 100%;
   }
+  nav.all-pages-nav ul li {
+    margin-left: 0;
+  }
+  nav.all-pages-nav ul li a {
+    color: #FFFFFF;
+  }
+  nav.all-pages-nav ul li a:hover {
+    background-color: inherit;
+    color: #FAE5FF;
+  }
+  nav.all-pages-nav p {
+    color: #FFFFFF;
+  }
+}
+
+@media (max-width: 900px) {
   body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1009,7 +1032,7 @@ form.contact-form .text-submit button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #FAE5FF;
+    background-color: #4C0341;
     width: 100%;
   }
   .menu ul {
@@ -1022,24 +1045,10 @@ form.contact-form .text-submit button {
   }
   .menu ul li.exit-responsive {
     text-align: right;
-    color: #4C0341;
+    color: #FFFFFF;
   }
   .menu ul li {
     padding: 2rem;
-  }
-  nav.all-pages-nav {
-    background-color: #4C0341;
-    padding: 2rem;
-    width: 100%;
-  }
-  nav.all-pages-nav ul li {
-    margin-left: 0;
-  }
-  nav.all-pages-nav p {
-    color: #FFFFFF;
-  }
-  nav.all-pages-nav a {
-    color: #FFFFFF;
   }
   .menu ul a {
     font-size: 3rem;
@@ -1254,5 +1263,11 @@ form.contact-form .text-submit button {
   .contact-us {
     padding: 2rem;
     margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
   }
 }
